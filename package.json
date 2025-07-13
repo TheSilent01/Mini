@@ -1,0 +1,43 @@
+{
+  "name": "minimalmind",
+  "version": "1.0.0",
+  "description": "The Ultimate Self-Hosted, AI-Powered, Privacy-First Reading + Notes App",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:mobile": "npm run start --workspace=apps/mobile",
+    "build": "npm run build --workspace=apps/web",
+    "build:web": "npm run build --workspace=apps/web",
+    "start": "npm run start --workspace=apps/web",
+    "lint": "npm run lint --workspace=apps/web",
+    "sync": "node scripts/sync-nextcloud.js",
+    "install:all": "npm install && npm install --workspace=apps/web && npm install --workspace=apps/mobile"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/minimalmind.git"
+  },
+  "keywords": [
+    "reading",
+    "notes",
+    "privacy",
+    "self-hosted",
+    "ai",
+    "nextcloud",
+    "supabase"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
